@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,6 +50,8 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --lira-teal: 173 83% 47%;
   }
 
   .dark {
@@ -98,4 +101,58 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.music-bg {
+  background: linear-gradient(180deg, #120338 0%, #2e0b5e 100%);
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+}
+
+.lira-btn {
+  background-color: hsl(var(--lira-teal));
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.lira-btn:hover {
+  opacity: 0.9;
+}
+
+.lira-input {
+  background-color: white;
+  color: black;
+  border: none;
+  width: 100%;
+}
+
+.lira-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.lira-divider::before,
+.lira-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.lira-divider::before {
+  margin-right: 0.5em;
+}
+
+.lira-divider::after {
+  margin-left: 0.5em;
+}
+
+.auth-container {
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }

@@ -1,11 +1,11 @@
 
 import React from 'react';
 import LiraLogo from '../components/LiraLogo';
-import RegisterForm from '../components/RegisterForm';
+import LoginForm from '../components/LoginForm';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
-const Index: React.FC = () => {
+const Login: React.FC = () => {
   const { isAuthenticated } = useAuth();
 
   if (isAuthenticated) {
@@ -16,10 +16,10 @@ const Index: React.FC = () => {
     <div className="music-bg min-h-screen flex items-center justify-center">
       <div className="auth-container">
         <LiraLogo />
-        <RegisterForm />
+        <LoginForm />
       </div>
     </div>
   );
 };
 
-export default Index;
+export default Login;
